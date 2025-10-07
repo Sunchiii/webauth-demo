@@ -12,6 +12,11 @@ const CardFinalResult: React.FC<TCardFinalResult> = ({
   chiptext,
   decryptedSalary,
 }) => {
+
+  function arrayBufferToString(buffer: ArrayBuffer): string {
+    const decoder = new TextDecoder('utf-8');
+    return decoder.decode(buffer);
+  }
   return (
     <>
       <div style={{ marginBottom: "20px" }}>
@@ -54,9 +59,9 @@ const CardFinalResult: React.FC<TCardFinalResult> = ({
           <p>
             <strong>Original Salary:</strong> {salary}
           </p>
-          <p>
+          <p >
             <strong>Encrypted Data:</strong>{" "}
-            {chiptext.byteLength > 0 ? `${chiptext.byteLength} bytes` : "None"}
+            <span className="border border-gray-300">{chiptext.byteLength > 0 ? `${arrayBufferToString(chiptext)}` : "None"}</span>
           </p>
           {decryptedSalary && (
             <p>
