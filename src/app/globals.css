@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #171717;
 }
 
@@ -11,16 +11,79 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.register-btn {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 10px;
+  height: 60px;
+  transition: background-color 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+}
+
+.register-btn:hover {
+  color: rgb(98, 141, 239);
+  font-weight: bold;
+}
+
+.register-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.card-decrypt {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 10px;
+  height: 200px;
+  width: 300px;
+  transition: background-color 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+}
+
+.card-decrypt:hover {
+  color: rgb(3, 42, 140);
+  font-weight: bold;
+}
+
+.card-ui {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 10px;
+  width: 350px;
+  transition: background-color 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
 }
